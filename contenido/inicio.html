@@ -4,38 +4,68 @@
 	
 	#dolar {
 		
+		font-size: 18px;
+
 		margin: auto;
 		padding: 5px;
 		height: 1000px;
 		
+		background-color: #D2F7DB;
+		width: 220px;
+		height: 70px;
+		padding: 10px;
+		overflow: hidden;
 
+		border-radius: 15px;
+		border-style: solid;
+		border-width: 2px;	
 		
+		float: right;
+		margin-right: 10px;
 	}
+
+	.noURL a{
+			display: none;
+		}
+
+
+
 
 </style>
 
+	
+	<section>
+		<h1>Hola Mundo</h1>
+
+	</section>
 
 	<article id="dolar">
 		
 		<h4>Cotización u$s</h4>
+				
+		<div id="div1"></div>	
+		<!-- TENGO QUE LLAMAR POR AJAX A LA COTIZACIÓN DEL DOLAR A RSS.PHP EN CONTROLADORES
 
-		<p>1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum perspiciatis aliquid in at eveniet ea ipsam dolorum vitae ad, quaerat temporibus repellendus aspernatur molestias ipsa nam maxime commodi amet distinctio.		
-		</p>
+		<?php
 
-		<p>2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum perspiciatis aliquid in at eveniet ea ipsam dolorum vitae ad, quaerat temporibus repellendus aspernatur molestias ipsa nam maxime commodi amet distinctio.
-		</p>
+			$docCotizacion = new SimpleXMLElement('http://usd.es.fxexchangerate.com/ars.xml',null,true);
+			$itemCotizacion = $docCotizacion->channel->item;
 
-		<p>3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum perspiciatis aliquid in at eveniet ea ipsam dolorum vitae ad, quaerat temporibus repellendus aspernatur molestias ipsa nam maxime commodi amet distinctio.		
-		</p>
 
-		<p>4 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum perspiciatis aliquid in at eveniet ea ipsam dolorum vitae ad, quaerat temporibus repellendus aspernatur molestias ipsa nam maxime commodi amet distinctio.
-		</p>
-		
-		<p>5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum perspiciatis aliquid in at eveniet ea ipsam dolorum vitae ad, quaerat temporibus repellendus aspernatur molestias ipsa nam maxime commodi amet distinctio.		
-		</p>
+			echo "<div class='noURL'>";
+			echo $itemCotizacion->description;
+			echo "</div>";
 
-		<p>6 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum perspiciatis aliquid in at eveniet ea ipsam dolorum vitae ad, quaerat temporibus repellendus aspernatur molestias ipsa nam maxime commodi amet distinctio.
-		</p>
+		 ?>
+		 -->
+
+		 <script>
+		 	$(function(){
+			    $.ajax({url: "controladores/rss.php", success: function(result){
+			        $("#div1").html(result);
+			    }});
+			});
+		 </script>
 
 
 	</article>	
