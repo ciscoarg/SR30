@@ -1,3 +1,6 @@
+// Controlamos el menú y el contenido del main que se trae de la carpeta contenido al index
+
+
 $(function(){
 
 var url = 'http://localhost/SR30/';
@@ -35,8 +38,8 @@ if(emptyTest) {
 		// Remarcamos con CSS en que seccion estoy en la barra de navegacion
 		var seccionActual = '#' + $('#contenido').attr('alt');
 		console.log(seccionActual);
-		$('#myTopnav a').css("background-color","#333"); // Respeto el fondo de estilo.css
-		$(seccionActual).css('background-color','#852525');
+		$('#myTopnav a').css({"background-color":"#333","color":"#FFFFFF"}); // Respeto el fondo de estilo.css
+		$(seccionActual).css({'background-color':'#E0DEDE','color':'#0E0D0D'});
 
 	});
 

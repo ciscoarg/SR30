@@ -35,11 +35,10 @@
 	
 
 <header>
-
-	<div id="encabezado">	
 		
 		<img id="logoSocRural" src="img/LogoSocRural.png" alt="Sociedad Rural 30 de Agosto">
 
+	<div id="encabezado">	
 		
 		<div class="topnav" id="myTopnav">
 		 
@@ -47,9 +46,11 @@
 		  <a id="institucion" href="institucion.html">Institución</a>
 		  <a id="herramientas" href="herramientas.html">Herramientas</a>
 		  <a id="contacto" href="contacto.html">Contacto</a>
+		  <div class="icon" onclick="myFunction()">&#9776;</div>
+		  <!--
 		  <a href="javascript:void(0);" class="icon" 
 		  onclick="myFunction()">&#9776;</a>
-		 
+		 	-->
 		</div>
 
 	</div>
@@ -61,8 +62,9 @@
 <div id="logo2"></div>
 <div id="nav2"></div>
 
-<section id="contenido" class="wrapper">
-</section>
+<main id="contenido" class="wrapper">
+
+</main>
 
 
 
@@ -80,8 +82,12 @@ Soy el Footer
 	
 
 	<script>
+
+		// Scroll del Encabezado al bajar en misPlugins
 		$(function(){
-		//	$("#logoSocRural").encabezadoScroll();
+			//$("#logoSocRural").encabezadoScroll();
+			//$("#encabezado").encabezadoFixed();			
+
 		});
 		
 	</script>
