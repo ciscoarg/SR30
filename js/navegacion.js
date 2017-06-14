@@ -42,6 +42,9 @@ if(emptyTest) {
 
 		$(seccionActual).css({'background-color':'#E0DEDE','color':'#0E0D0D'});
 
+		//Al hacer click en un nuevo contenido subir el scroll de window al top
+		$("html, body").animate({ scrollTop: 1 }, "slow");
+
 	});
 
 	
