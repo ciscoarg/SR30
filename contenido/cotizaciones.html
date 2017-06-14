@@ -1,0 +1,82 @@
+
+
+<style>
+	
+	#dolar {
+		
+		font-size: 18px;
+
+		margin: auto;
+		padding: 5px;
+		height: 1000px;
+		
+		background-color: #D2F7DB;
+		width: 220px;
+		height: 70px;
+		padding: 10px;
+		overflow: hidden;
+
+		border-radius: 15px;
+		border-style: solid;
+		border-width: 2px;	
+		
+		float: right;
+		margin-right: 10px;
+	}
+
+	.noURL a{
+			display: none;
+		}
+
+
+
+
+</style>
+
+	<article id="dolar">
+		
+		<h4>Cotización u$s</h4>
+				
+		<div id="dolar1"></div>	
+
+	</article>	
+
+
+	<article>
+		
+		<h4>Cotización Cereales</h4>
+				
+		<div id="cereales1"></div>	
+	
+	</article>	
+
+
+
+
+
+
+	 <script>
+		 	$(function(){
+			    
+		 		// Cotización dolar por RSS	
+			    $.ajax({url: "controladores/rss/dolar.php", success: function(result){
+			        $("#dolar1").html(result);
+			    }});
+	
+
+
+			    // Cotización Cereales por RSS
+				$.ajax({url: "controladores/rss/cereales.php", success: function(result){
+			       
+					
+			        $("#cereales1").html(result);
+        
+
+			    }});
+
+			
+
+
+			});
+	
+	 </script>

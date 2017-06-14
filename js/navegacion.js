@@ -38,11 +38,19 @@ if(emptyTest) {
 		// Remarcamos con CSS en que seccion estoy en la barra de navegacion
 		var seccionActual = '#' + $('#contenido').attr('alt');
 		console.log(seccionActual);
-		$('#myTopnav a').css({"background-color":"#333","color":"#FFFFFF"}); // Respeto el fondo de estilo.css
+		//$('#myTopnav a').css({"background-color":"#333","color":"#FFFFFF"}); // Respeto el fondo de estilo.css
+
 		$(seccionActual).css({'background-color':'#E0DEDE','color':'#0E0D0D'});
 
 	});
 
+	
+	
+	$('#myTopnav a').hover(function(){
+			$(this).css({"background-color":"#E0DEDE","color":"#0E0D0D"});},
+			function(){
+			$(this).css({"background-color":"#333","color":"#FFFFFF"});
+		}); 
 
 
  

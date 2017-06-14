@@ -1,73 +1,22 @@
 
-
-<style>
-	
-	#dolar {
-		
-		font-size: 18px;
-
-		margin: auto;
-		padding: 5px;
-		height: 1000px;
-		
-		background-color: #D2F7DB;
-		width: 220px;
-		height: 70px;
-		padding: 10px;
-		overflow: hidden;
-
-		border-radius: 15px;
-		border-style: solid;
-		border-width: 2px;	
-		
-		float: right;
-		margin-right: 10px;
-	}
-
-	.noURL a{
-			display: none;
-		}
-
-
-
-
-</style>
-
 	
 	<section>
 		<h1>Hola Mundo</h1>
 
+
+
+	
+<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam saepe molestias nisi dolor ipsam nostrum praesentium sed quos dignissimos, dolorum voluptates, ut quibusdam consectetur similique rerum ipsum! Autem, incidunt, sit!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa eum, blanditiis recusandae mollitia eveniet voluptatem sunt cupiditate facilis fuga consequuntur, hic architecto aspernatur iusto eos modi dolore aperiam explicabo voluptatum.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores molestias eius reiciendis ex animi quod nihil placeat perferendis accusantium, vitae. Recusandae, dolores! Sunt suscipit perferendis ea, nobis dolore quia asperiores.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam laboriosam, nam, dolore quibusdam repudiandae laudantium odio quis voluptas nostrum qui saepe eius quaerat incidunt pariatur quae ducimus amet illum quas?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit dignissimos nisi nemo veritatis asperiores tenetur ratione doloremque? Explicabo sint hic labore iure modi inventore dolorem, in quia reprehenderit harum obcaecati.</p>
+
+
+
+
+
+
+
+
+
+
 	</section>
-
-	<article id="dolar">
-		
-		<h4>Cotización u$s</h4>
-				
-		<div id="div1"></div>	
-		<!-- TENGO QUE LLAMAR POR AJAX A LA COTIZACIÓN DEL DOLAR A RSS.PHP EN CONTROLADORES
-
-		<?php
-
-			$docCotizacion = new SimpleXMLElement('http://usd.es.fxexchangerate.com/ars.xml',null,true);
-			$itemCotizacion = $docCotizacion->channel->item;
-
-
-			echo "<div class='noURL'>";
-			echo $itemCotizacion->description;
-			echo "</div>";
-
-		 ?>
-		 -->
-
-		 <script>
-		 	$(function(){
-			    $.ajax({url: "controladores/rss.php", success: function(result){
-			        $("#div1").html(result);
-			    }});
-			});
-		 </script>
-
-
-	</article>	
 
 
