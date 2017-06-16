@@ -93,11 +93,58 @@ header img {
 
 }
 
+
+
+@keyframes miniLogo {
+    
+
+    
+    from {top: 85px;}
+    to {top: 45px;}
+}
+
+
+
+#miniLogoSR30 {
+
+  
+  
+  height:40px; 
+  width:40px;
+  
+  margin: -20px;
+  position: fixed;
+  float: right; 
+  display: block;
+  
+  
+  margin-left: 85%;
+  
+  visibility: hidden;
+ 
+  top: 45px;
+  animation-name: miniLogo;
+  animation-duration: 2s;
+
+}
+
+
+
+#miniLogoSR30:hover{
+  cursor: pointer;
+}
+
+
+
 /* Change the color of links on hover */
 .topnav a:hover {
     background-color: #ddd;
     color: black;
 }
+
+
+
+
 
 /* Hide the link that should open and close the topnav on small screens */
 .topnav .icon {
@@ -116,12 +163,6 @@ header img {
 
 
 /*------ MAIN --------*/
-
-#contenido {
-	
-	
-}
-
 
 
 .wrapper {
@@ -191,13 +232,19 @@ header img {
   display: block;
   visibility: hidden;
   float: left;
-  height: 50px;
-  width: 130px;
+   width: 80px;
+   left: -30px;  
   position: fixed;
   top: 87%;
-  left: -50px;
 
 }
+
+
+
+#marcador:hover{
+  cursor: pointer;
+}
+
 
 #whatsapp {
   float: right;
