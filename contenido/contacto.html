@@ -1,0 +1,68 @@
+
+<h1>Contacto</h1>
+
+
+<section>
+
+<p>Completa el siguiente formulario y nos comunicaremos contigo a la brevedad</p>
+
+</section>
+
+
+
+
+<div class="container">
+  <form  method="post" id="contactForm" action="controladores/contacto.php">
+	<!-- action="controladores/contacto.php" -->
+
+    <input type="text" id="nombre" name="nombre" placeholder="Nombre">
+
+    <input type="text" id="apellido" name="apellido" placeholder="Apellido">
+	
+	<input type="text" id="ciudad" name="ciudad" placeholder="Ciudad">
+
+	<input type="number" id="tel" name="tel" placeholder="Teléfono">
+
+	<input type="email" id="email" name="email" placeholder="Email">
+
+    <textarea id="comentarios" name="comentarios" placeholder="Comentarios" style="height:200px"></textarea>
+
+    <input type="submit" id="btnContacto" value="Enviar">
+
+  </form>
+
+</div>
+
+
+
+<section>
+	<div id="respuestaContacto">
+		
+	</div>
+</section>
+
+
+
+
+
+<script>
+	$(function(){
+
+
+		$("#contactForm").submit(function(){
+    		alert("Mensaje Enviado Correctamente");
+
+    		$.post("controladores/contacto.php",$("#contactForm").serialize(),function(res){
+
+    			$("#respuestaContacto").append(res);
+    		});
+
+    	});	
+
+
+		
+
+
+
+	});
+</script>

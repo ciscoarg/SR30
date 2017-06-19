@@ -3,25 +3,26 @@
 
 $(function(){
 
-var url = 'http://localhost/SR30/';
+	var url = '../SR30/';
+	//http://localhost
 
 
-// Por defecto dejamos al inicio.html en el contenido del sitio
-$('#contenido').load(url+'contenido/inicio.html');
-/* //Iba a hacer un test para comprobar si estaba vacio el contenido pero lo dejo comentado
-var emptyTest = $('#contenido').is(':empty');
+	// Por defecto dejamos al inicio.html en el contenido del sitio
+	$('#contenido').load(url+'contenido/inicio.html');
+	/* //Iba a hacer un test para comprobar si estaba vacio el contenido pero lo dejo comentado
+	var emptyTest = $('#contenido').is(':empty');
 
-console.log(emptyTest);
+	console.log(emptyTest);
 
-if(emptyTest) {
+	if(emptyTest) {
 
-}
-*/
-
-
+	}
+	*/
 
 
-//Controlamos el contenido del main en el index según el menu de navegación
+
+
+	//Controlamos el contenido del main en el index según el menu de navegación
 
 	$('#myTopnav a').click(function(e) {
 		e.preventDefault(); // Previene la acción por defecto, que sería enviarte a otra página
@@ -45,6 +46,9 @@ if(emptyTest) {
 		//Al hacer click en un nuevo contenido subir el scroll de window al top
 		$("html, body").animate({ scrollTop: 1 }, "slow");
 
+		// Al hacer click en un enlace del menu se cierra
+		$("#myTopnav, a").click(toggleResponsiveClass());
+		
 	});
 
 	
@@ -57,6 +61,7 @@ if(emptyTest) {
 
 
  
+
 
 
 

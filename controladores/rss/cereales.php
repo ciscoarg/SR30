@@ -15,13 +15,15 @@
 	echo "<br><br>";
 
 
-	for($i=0; $i<10; $i++){
+	for($i=0; $i<5; $i++){
 		echo $descriptionExplote[$i]." ";
 	}
 	
 
 	echo "<br><br>";
 
-
+	for($i=5; $i<10; $i++){
+		echo $descriptionExplote[$i]." ";
+	}
 
 ?>

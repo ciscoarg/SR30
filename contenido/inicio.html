@@ -30,19 +30,68 @@
 	<img src="img/capacitacionValtra.jpg" alt="capacitacion" width="100%">
 	</p>
 	
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe harum nihil error assumenda consequuntur vero soluta reprehenderit dolorem autem, aspernatur doloremque incidunt sequi labore sint, placeat distinctio. Numquam fugiat, quos!</p>
+	<p>Se invita a todos los socios, sus encargados y empleados a participar de la <b>Capacitación de Manejo Responsable de Maquinaria</b> que se realizará en el mes de Agosto en el predio de la Sociedad Rural de 30 de Agosto.</p>
 
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore quis repellat impedit obcaecati hic, nulla, ducimus natus reprehenderit perferendis ipsum et! Inventore itaque, cupiditate, facilis maxime et quis illum aliquam.</p>
-	
+	<p>Para inscibirse los socios deberán rellenar el formulario con los nombres de cada uno de los participantes de cada establecimiento haciendo click en el siguiente botón:</p>
+
+	<button id="btnLanding">Inscribirse</button>
+		
 	<br><br>
 	<hr>
 
 	<div>
-		<h4>Auspicia este evento:</h4>
-		<img src="img/agropecuariaLabriola.jpg" alt="Agropecuaria Labriola" width="40%">
-		<img src="img/logoCrea.jpg" alt="CREA" width="15%">
+		<h4>Auspician este evento:</h4>
+		<br>
+		<img src="img/agropecuariaLabriola.jpg" alt="Agropecuaria Labriola" width="35%">
+		<img src="img/crea.png" alt="CREA" width="15%">
 	</div>
 
 </section>
 
 
+<script>
+
+$(function(){
+	
+	
+	console.log('Script inicio funcionando');
+
+	var href = "contenido/landing/inscripcionMaquinariaResponsable.html";
+	
+	$("#btnLanding").click(function(){
+		console.log('clickeaste boton');
+		
+		$('#contenido').empty(); // Limpia el div 'contenido'
+		//$('#contenido').attr('alt',$(this).attr('id'));
+		$('#contenido').load(href); // Esta línea simplemente carga el contenido dentro del div 'contenido'
+	
+		//Al hacer click en un nuevo contenido subir el scroll de window al top
+		$("html, body").animate({ scrollTop: 1 }, "slow");
+		
+	
+	});
+
+
+
+
+
+
+	var formContacto = $.get('contacto');
+
+		// Al enviar un submit por el form de contacto.html se activa esto
+		if(formContacto=="enviado") {
+			console.log(contacto);
+			alert("El mensaje se ha enviado exitosamente");
+			//Vuelvo a enviar la navegacion a contacto.html
+			//$('#contenido').load('../SR30/contenido/contacto.html');
+
+			//Limpio la url
+			window.location.hash="";
+		}
+
+
+	
+
+});
+
+</script>

@@ -39,7 +39,7 @@ $(function(){
 	});
 
 
-
+	// Al hacer click en el MiniLogo muestra el encabezado y va al top
 	$("#miniLogoSR30").click(function(){
 		$("#encabezado").removeClass("encabezado2");
 		$("html, body").animate({ scrollTop: -1 }, "slow");
@@ -50,7 +50,7 @@ $(function(){
 
 
 
-
+	
 
 
 
